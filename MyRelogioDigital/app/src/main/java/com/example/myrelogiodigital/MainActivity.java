@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Ajusta automaticamente o espaçamento da tela considerando
         // a barra de status e a barra de navegação.
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.textClockHora), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
 
             // Obtém as dimensões das barras do sistema.
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

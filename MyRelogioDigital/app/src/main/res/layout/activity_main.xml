@@ -1,56 +1,138 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/textClockHora"
+
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+
+    android:background="@drawable/background_clock"
+
     tools:context=".MainActivity">
+
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:text="@string/app_name"
-        android:textColor="#E9D500"
-        android:textSize="28sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="16dp" />
 
-    <TextClock
-        android:id="@+id/textClock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:format12Hour="hh:mm:ss"
         android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:textSize="32sp"
+        android:textStyle="bold"
 
-    <TextView
-        android:id="@+id/textHoraAtual"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="HORA ATUAL: "
-        android:textColor="#00FF0C"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp"
+
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textClock" />
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="330dp"
+        android:layout_height="280dp"
+
+        android:layout_marginTop="60dp"
+
+        app:cardCornerRadius="30dp"
+        app:cardElevation="15dp"
+
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Hora Atual"
+
+                android:textColor="#555555"
+                android:textSize="18sp"/>
+
+
+
+            <TextClock
+
+                android:id="@+id/textClock"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:format12Hour="HH:mm:ss"
+
+                android:textColor="#000000"
+
+                android:textSize="45sp"
+
+                android:textStyle="bold"
+
+                android:layout_marginTop="20dp"/>
+
+
+
+            <TextView
+
+                android:id="@+id/textHoraAtual"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Sistema funcionando"
+
+                android:textColor="#00A000"
+
+                android:textSize="18sp"
+
+                android:layout_marginTop="20dp"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
 
     <Button
+
         android:id="@+id/btnCapturar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+
+        android:layout_width="220dp"
+
+        android:layout_height="60dp"
+
+        android:layout_marginBottom="60dp"
+
+        android:background="@drawable/button_clock"
+
         android:text="Capturar Hora"
-        android:textSize="25sp"
+
+        android:textColor="#ffffff"
+
+
+        android:textSize="20sp"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textHoraAtual" />
+
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
